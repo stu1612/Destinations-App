@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "eslint": "^7.32.0",
     "gatsby": "^3.10.2",
     "gatsby-plugin-gatsby-cloud": "^2.10.1",
     "gatsby-plugin-image": "^1.10.1",
@@ -20,7 +21,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
   },
   "keywords": [
     "gatsby"
