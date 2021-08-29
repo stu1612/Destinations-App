@@ -1,9 +1,22 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Button } from "./Button"
 import Video from "../assets/videos/Hero.mp4"
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query heroInfo {
+      site {
+        siteMetadata {
+          description
+          hero_title
+        }
+      }
+    }
+  `)
+
+  const { description, hero_title } = data.site.siteMetadata
   return (
     <HeroContainer>
       <HeroBg>
@@ -11,8 +24,8 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <HeroH1>Unreal Destinations</HeroH1>
-          <HeroP>Out of this world</HeroP>
+          <HeroH1>{hero_title}</HeroH1>
+          <HeroP>{description}</HeroP>
           <Button primary="true" big="true" round="true" to="/trips">
             Travel Now
           </Button>

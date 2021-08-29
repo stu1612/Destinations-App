@@ -4,10 +4,10 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Trips } from "../components/Trips"
 
-const IndexPage = () => (
+const IndexPage = ({ description, hero_title }) => (
   <Layout>
     <Seo title="Home" />
-    <Hero />
+    <Hero description={description} hero_title={hero_title} />
     <Trips />
   </Layout>
 )
